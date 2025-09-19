@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Slot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Book Slot</h1>
+        <form method="POST" class="p-4 bg-white shadow rounded">
+            <div class="mb-3">
+                <label for="user_id" class="form-label">User ID:</label>
+                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ user_id }}" readonly required>
+            </div>
+            <div class="mb-3">
+                <label for="spot_id" class="form-label">Spot ID:</label>
+                <input type="text" class="form-control" id="spot_id" name="spot_id" value="{{ spot['id'] }}" readonly required>
+            </div>
+            <div class="mb-3">
+                <label for="lot_id" class="form-label">Lot ID:</label>
+                <input type="text" class="form-control" id="lot_id" name="lot_id" value="{{ spot['lot_id'] }}" readonly required>
+            </div>
+            <div class="mb-3">
+                <label for="vehicle_number" class="form-label">Vehicle Number:</label>
+                <input type="text" class="form-control" id="vehicle_number" name="vehicle_number" required>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Book</button>
+                <a href="/user/dashboard" class="btn btn-secondary">Back</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
