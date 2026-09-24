@@ -1,12 +1,14 @@
-import matplotlib
+﻿import matplotlib
 matplotlib.use('Agg')
 from flask import Flask,render_template,redirect,request,session,url_for
 import sqlite3
 import matplotlib.pyplot as plt 
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app=Flask(__name__)
-app.secret_key='This is my secret key'
+app.secret_key=os.getenv('SECRET_KEY', 'dev-only-change-me')
 
 def databaseconn():
     conn = sqlite3.connect("data/parking.db")
