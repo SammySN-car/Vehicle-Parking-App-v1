@@ -1,0 +1,7 @@
+﻿.env
+__pycache__/
+*.pyc
+static/adminpie.png
+static/adminbar.png
+static/userbar.png
+data/parking.db
