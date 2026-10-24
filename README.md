@@ -61,4 +61,4 @@ vehicle_parking_app_24f2006661/
 
 ## License
 
-For coursework / personal use.
+This code provides a simple example. It contains a single line of text for demonstration purposes. This code is intended for coursework and personal use only.
